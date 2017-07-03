@@ -12,7 +12,7 @@ class APICallbackFactory {
 
             } else if (res) {
                 Logger.log(`[${receiver}] Response (${res.statusCode}): ${res.body}`);
-                response.status(res.statusCode).send(200);
+                response.send(res);
 
             } else {
                 Logger.log(`[${receiver}] No error or response.`);
